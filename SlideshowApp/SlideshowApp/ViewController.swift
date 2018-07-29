@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     @IBAction func StartStop(_ sender: Any) {
         if playing == 0 {
             self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateImage(_:)), userInfo: nil, repeats: true)
-            label.setTitle("停止", for: .normal)  //.って何？
+            label.setTitle("停止", for: .normal)  //.って何？forは？
             StepBack.isEnabled = false
             MoveOn.isEnabled = false
             playing = 1
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var MoveOn: UIButton!
     @IBAction func NextImg(_ sender: Any) {
-        //updateImage(_:)
+        //updateImage(_:)       //なんで使えないの？
         testfunc()
     }
     

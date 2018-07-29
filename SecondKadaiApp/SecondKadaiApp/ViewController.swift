@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var inName: UITextField!
-    @IBAction func unwind(_ segue: UIStoryboardSegue) {     //←これ何？
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {     //←これ何？　_
     }
 
     override func viewDidLoad() {
@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {     //←これ何？
         let show:showName = segue.destination as! showName
+        
         //let printName = inName.text
         //show.name = printName!
         show.name = inName.text!     //なぜ！が必要？textfieldがnilになりうるから？
